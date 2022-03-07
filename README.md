@@ -45,7 +45,9 @@ greetings.associateWith { $0.count } ==
     "Hallo": 5,
     "Привіт": 6
 ]
+```
 
+```swift 
 greetings.associateBy { $0.hash } ==
 [
     13282270830741: "Hallo",
