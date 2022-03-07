@@ -11,34 +11,27 @@ let greetings = ["Hi", "Привет", "Hallo", "Привіт"]
 ### Sort
 
 ```swift 
-
-// Swift:
 greetings.sorted { $0.count < $0.count }
+```
 
-// Kollection:
+Kollection:
+```swift 
+greetings.sortedBy { $0.count } // ["Hi", "Hallo", "Привет", "Привіт"]
 
-// ["Hi", "Hallo", "Привет", "Привіт"]
-greetings.sortedBy { $0.count }
-
-// ["Привет", "Привіт", "Hallo", "Hi"]
-greetings.sortedByDescending { $0.count }
+greetings.sortedByDescending { $0.count } // ["Привет", "Привіт", "Hallo", "Hi"]
 ```
 
 ### All and Any
 
 ```swift 
-
-// Swift:
 greetings.allSatisfy { $0.count > 3 }
+```
 
-// Kollection:
+Kollection:
+```swift 
+greetings.any { $0.count == 2 } // true
 
-// true
-greetings.any { $0.count == 2 }
+greetings.any { $0.count == 7 } // false
 
-// false
-greetings.any { $0.count == 7 }
-
-// true
-greetings.all { $0.count >= 2 }
+greetings.all { $0.count >= 2 } // true
 ```
