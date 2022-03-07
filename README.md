@@ -1,6 +1,6 @@
 # Kollection
 
-Collection convinience extensions from Kotlin for Swift.
+Collection convenience extensions from Kotlin for Swift.
 
 ## Examples
 
