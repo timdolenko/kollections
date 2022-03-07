@@ -46,9 +46,11 @@ greetings.associateWith { $0.count } ==
     "Привіт": 6
 ]
 
-greetings.associateBy { $0.first! } ==
+greetings.associateBy { $0.hash } ==
 [
-    "H": "Hallo",
-    "П": "Привіт",
+    13282270830741: "Hallo",
+    5175370168390695: "Привіт",
+    753535: "Hi",
+    5175370167839430: "Привет",
 ]
 ```

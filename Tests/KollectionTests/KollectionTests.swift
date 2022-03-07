@@ -63,6 +63,18 @@ final class KollectionTests: XCTestCase {
             ]
         )
     }
+    
+    func testAssociateByHash() throws {
+        XCTAssertEqual(
+            greetings.associateBy { $0.hash },
+            [
+                13282270830741: "Hallo",
+                5175370168390695: "Привіт",
+                753535: "Hi",
+                5175370167839430: "Привет",
+            ]
+        )
+    }
 }
             
 fileprivate extension Int {
