@@ -6,8 +6,10 @@ public extension Collection where Element: Comparable {
          greetings.sortedBy { $0.count }
      
      */
-    func sortedBy<T: Comparable>(_ selector: (Element) -> T) -> [Self.Element] {
-        sorted { selector($0) < selector($1) }
+    func sortedBy<T: Comparable>(
+        _ selector: (Element) throws -> T
+    ) rethrows -> [Self.Element] {
+        try sorted { try selector($0) < selector($1) }
     }
     
     /**
@@ -17,7 +19,9 @@ public extension Collection where Element: Comparable {
          greetings.sortedByDescending { $0.count }
      
      */
-    func sortedByDescending<T: Comparable>(_ selector: (Element) -> T) -> [Self.Element] {
-        sorted { selector($0) > selector($1) }
+    func sortedByDescending<T: Comparable>(
+        _ selector: (Element) throws -> T
+    ) rethrows -> [Self.Element] {
+        try sorted { try selector($0) > selector($1) }
     }
 }

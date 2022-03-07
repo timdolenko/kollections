@@ -35,3 +35,20 @@ greetings.any { $0.count == 7 } // false
 
 greetings.all { $0.count >= 2 } // true
 ```
+
+### Associate By & With
+```swift 
+greetings.associateWith { $0.count } ==
+[
+    "Hi": 2,
+    "Привет": 6,
+    "Hallo": 5,
+    "Привіт": 6
+]
+
+greetings.associateBy { $0.first! } ==
+[
+    "H": "Hallo",
+    "П": "Привіт",
+]
+```
