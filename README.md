@@ -1,6 +1,6 @@
 # Kollection
 
-Provides convinience extensions for collection types available in Kotlin.
+Provides collection convinience extensions from Kotlin.
 
 ## Examples
 
